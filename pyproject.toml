@@ -1,0 +1,17 @@
+[project]
+name = "Object-Detection-Module"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.12,<4.0"
+
+dependencies = [
+    "pydantic>=2.12.5",
+    "pyhumps>=3.8.0",
+    "python-dotenv>=1.2.1",
+    "ultralytics>=8.3.240",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pipdeptree==2.26.1",
+]
