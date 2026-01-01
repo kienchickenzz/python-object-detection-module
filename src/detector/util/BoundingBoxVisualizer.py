@@ -21,10 +21,8 @@ class BoundingBoxVisualizer:
         self,
         image: np.ndarray,
         bounding_boxes: list[ObjectLocationResponse],
-        make_copy: bool = False,
-        include_label: bool = True
     ) -> np.ndarray:
-        canvas = image.copy() if make_copy else image
+        canvas = image.copy() 
         
         for box in bounding_boxes:
             rectangle(
@@ -35,16 +33,15 @@ class BoundingBoxVisualizer:
                 thickness=self._thickness
             )
             
-            if include_label:
-                text = f"{box.object_type.value}:{box.confidence}"
-                putText(
-                    img=canvas,
-                    text=text,
-                    org=(box.top_left.width, box.top_left.height),
-                    fontFace=FONT_HERSHEY_SIMPLEX,
-                    fontScale=self._font_scale,
-                    color=self._color,
-                    thickness=self._thickness
-                )
+            text = f"{box.object_type.value}:{box.confidence}"
+            putText(
+                img=canvas,
+                text=text,
+                org=(box.top_left.width, box.top_left.height),
+                fontFace=FONT_HERSHEY_SIMPLEX,
+                fontScale=self._font_scale,
+                color=self._color,
+                thickness=self._thickness
+            )
         
         return canvas

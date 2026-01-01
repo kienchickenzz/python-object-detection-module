@@ -7,7 +7,7 @@ from src.detector.dto.res.ObjectCountResponse import ObjectCountResponse
 from src.detector.dto.res.ObjectLocationResponse import ObjectLocationResponse
 from src.detector.util.MaskProcessor import MaskProcessor 
 
-class ImageAnalyzer(AbstractObjectDetectionOrchestrator):
+class ObjectDetectionOrchestrator(AbstractObjectDetectionOrchestrator):
 
     def __init__(self, object_detector: AbstractObjectDetector) -> None:
         self._object_detector = object_detector

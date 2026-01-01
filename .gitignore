@@ -18,3 +18,7 @@ uv.lock
 # Vscode
 **/.vscode
 **/.mypy_cache
+
+# Model
+**/weight
+**/output

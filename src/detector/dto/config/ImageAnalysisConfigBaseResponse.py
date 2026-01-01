@@ -1,4 +1,3 @@
-from uuid import UUID
 from typing import Optional
 
 from pydantic import Field
@@ -9,7 +8,7 @@ from src.detector.dto.PixelCoordinate import PixelCoordinate
 
 
 class ImageAnalysisConfigBaseResponse(ResponseBase):
-    id: UUID = Field(title="Analysis config ID")
+    id: int = Field(title="Analysis config ID")
     config_name: Optional[str] = Field(
         title="Configuration name", 
         default=None

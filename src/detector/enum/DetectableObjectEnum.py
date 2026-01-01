@@ -9,3 +9,5 @@ class DetectableObjectEnum(Enum):
     BICYCLE = "bicycle"
     BUS = "bus"
     TRUCK = "truck"
+
+    PERSON = "person"
