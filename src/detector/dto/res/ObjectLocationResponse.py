@@ -1,6 +1,6 @@
 from pydantic import Field
 
-from src.shared.dto.ResponseBase import ResponseBase
+from src.detector.dto.res.ResponseBase import ResponseBase
 
 from src.detector.enum.DetectableObjectEnum import DetectableObjectEnum
 from src.detector.dto.ObjectBoundingBox import ObjectBoundingBox
